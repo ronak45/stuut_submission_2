@@ -6,10 +6,10 @@ import { RouterLink, RouterView } from 'vue-router'
   <div class="container">
     <header>
       <div class="wrapper">
-        <h1>Stuut</h1>
+        <h1>Stock Search</h1>
         <nav>
           <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/about">About</RouterLink>
+          <RouterLink to="/search">Search</RouterLink>
         </nav>
       </div>
     </header>
@@ -25,6 +25,9 @@ import { RouterLink, RouterView } from 'vue-router'
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 header {
@@ -36,38 +39,41 @@ header {
   justify-content: center;
   width: 100%;
   top: 0;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 20px;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  color: #2c3e50;
 }
 
 nav {
   width: 100%;
-  font-size: 12px;
+  font-size: 1rem;
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+  margin-top: 1.5rem;
 }
 
 nav a {
   display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 4px;
+  color: #2c3e50;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
 
-nav a:first-of-type {
-  border: 0;
+nav a:hover {
+  background-color: #e0e0e0;
+}
+
+nav a.router-link-active {
+  background-color: #42b983;
+  color: white;
 }
 
 .content {
@@ -75,5 +81,15 @@ nav a:first-of-type {
   display: flex;
   justify-content: center;
   align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    font-size: 0.9rem;
+  }
 }
 </style>
