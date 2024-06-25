@@ -36,3 +36,4 @@ For production
 4. Optimizations:
 -- Implement caching strategies to reduce API calls
 -- Optimize db queries / implement pagination 
+# stuut_submission_2
